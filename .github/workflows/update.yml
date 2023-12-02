@@ -1,0 +1,22 @@
+on: 
+  push:
+    paths:
+      - 'quine.asm'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: |
+        sudo apt install nasm -y
+        nasm quine.asm -o quine.com
+        zip quine.zip quine.com
+        rm quine.com
+        git config --global user.email "just4now666666@gmail.com"
+        git config --global user.name "donno2048"
+        git add .
+        git commit -m "update zip file"
+        git push
