@@ -19,3 +19,5 @@ Compile and run [quine.asm](./quine.asm) the output will be the code itself.
 - The code doesn't use `incbin` (again, this will be trivial by including the source code itself)
 
 - The code doesn't take any input (as it will be trivial to provide the source as input)
+
+- The code doesn't use interrupts (else we could just map interrupt xx to print `dw 0xcdxx` and call it)
