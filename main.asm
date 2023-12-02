@@ -1,8 +1,9 @@
 org 0x100
 push 0xb800
 pop es
-mov ax, 0x3
-int 0x10
+mov ah, 0x7
+mov ch, 0xf
+rep stosw
 mov bx, hex
 mov di, 0xa0
 print_line:
