@@ -3,6 +3,8 @@ on:
     paths:
       - 'quine.asm'
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   update:
     runs-on: ubuntu-latest
