@@ -2,6 +2,8 @@
 
 An x86 assembly quine for DOS.
 
+You can view the online demo [here](https://donno2048.github.io/nasm-quine/).
+
 ## Build
 
 Compile [main.asm](./main.asm) and execute it on DOS, it'll output some nasm code.
